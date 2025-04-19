@@ -24,6 +24,5 @@ python -m grpc_tools.protoc -Iapp/protos --python_out=app/protos --grpc_python_o
   string error = 3;      // 错误信息
   }
 
-- **健康检查请求示例**
-  ```protobuf
-  grpcurl -plaintext localhost:50051 relation.RelationService/HealthCheck
+
+模型后端Grpc端口号:50051

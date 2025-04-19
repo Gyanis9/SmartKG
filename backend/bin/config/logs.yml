@@ -1,0 +1,13 @@
+logs:
+  - name: root
+    level: info
+    appenders:
+      - type: FileLogAppender
+        file: logs/SmartKG/root.log
+      - type: StdoutLogAppender
+  - name: system
+    level: info
+    appenders:
+      - type: FileLogAppender
+        file: logs/SmartKG/system.log
+      - type: StdoutLogAppender

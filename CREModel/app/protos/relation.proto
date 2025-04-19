@@ -1,0 +1,18 @@
+syntax = "proto3";
+package protos;
+
+service RelationService {
+  rpc PredictRelation (PredictRequest) returns (PredictResponse) {}
+}
+
+message PredictRequest {
+  string sentence = 1;
+  string entity1 = 2;
+  string entity2 = 3;
+}
+
+message PredictResponse {
+  string relation = 1;
+  float confidence = 2;
+  string error = 3;
+}

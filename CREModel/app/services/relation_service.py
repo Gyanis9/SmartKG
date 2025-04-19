@@ -12,7 +12,6 @@ class RelationServicer(relation_pb2_grpc.RelationServiceServicer):
         self.tokenizer = tokenizer
         self.id2label = {i: rel for i, rel in enumerate(self.model.learned_relations)}
         self.label2id = {rel: i for i, rel in enumerate(self.model.learned_relations)}
-        print(f'relations id: {self.model.learned_relations}')
 
         if torch.cuda.is_available():
             self.model = self.model.cuda()
@@ -108,9 +107,6 @@ class RelationServicer(relation_pb2_grpc.RelationServiceServicer):
             # 6. 获取预测结果
             pred_idx = np.argmax(probs)
             confidence = float(probs[pred_idx])
-            print(f'confidence: {confidence}')
-            print(f'pred_idx: {pred_idx}')
-            print(f'relations: {self.id2label}')
             relation = self.id2label.get(pred_idx, "unknown")
 
             return relation_pb2.PredictResponse(

@@ -69,6 +69,8 @@ find_package(hiredis CONFIG REQUIRED)        # hiredis Redis客户端库
 find_package(redis++ CONFIG REQUIRED)        # redis++ C++ Redis客户端库
 find_package(gRPC CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
+find_package(Python3 REQUIRED)
+find_package(Python REQUIRED)
 
 
 # MySQL配置（手动指定路径）

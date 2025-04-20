@@ -81,12 +81,14 @@ namespace CRE
             response_json["confidence"] = confidence;
             response->setBody(response_json.dump());
             response->setHeader("Content-Type", "application/json");
+            response->setHeader("Access-Control-Allow-Origin", "*");
         }
         catch (const std::exception& e)
         {
             // 异常处理
             response->setStatus(Gyanis::net::http::HttpStatus::INTERNAL_SERVER_ERROR);
             response->setBody("Internal Server Error: " + std::string(e.what()));
+            response->setHeader("Access-Control-Allow-Origin", "*");
         }
 
         return 0;

@@ -13,10 +13,14 @@
 ### 🛠 技术栈全景
 | 模块           | 核心技术选型                                                                 |
 |--------------|------------------------------------------------------------------------|
-| **C++服务端**   | Gyanis框架（协程调度/异步Hook）、gRPC通信、Redis、MySQL8.0                         |
+| **C++服务端**   | Gyanis框架（协程调度/异步Hook）、gRPC通信、Redis、MySQL8.0                            |
 | **Python模型** | PyTorch2.1 + BERT-base + TACRED数据集、ONNX推理优化、持续关系学习（Continual Learning） |
 | **前端**       | Vue3 + Element Plus + ECharts可视化                                       |
 
+
+---
+### 前端框架图
+![](/SmartKG/image/框架.png)
 ---
 
 ### 🔥 核心功能实现
